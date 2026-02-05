@@ -46,8 +46,26 @@ class Empleado {
 }
 
 const empleado1 = new Empleado("Armin", "Contreras", "Gerente", "200000", "Viña", "1980")
+const empleado2 = new Empleado("Maria", "Torres", "ingeniera", "15000", "Calle 456", "1990");
+const empleado3 = new Empleado("Pedro", "Gutierrez", "gerente", "18000", "Calle 789", "1980");
+const empleado4 = new Empleado("Ana", "Hernandez", "secretaria", "11000", "Calle 012", "1970");
+
+let empleados = []
 
 
-console.log(empleado1.informacion())
+empleados.push(empleado1)
+
+empleados.push(empleado2)
+
+empleados.push(empleado3)
+
+empleados.push(empleado4)
+
+//console.log(empleados)
 
 
+
+
+empleados.forEach((empleado)=>{
+    console.log(empleado.informacion())
+})

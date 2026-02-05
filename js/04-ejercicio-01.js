@@ -17,3 +17,33 @@ calcularEdad()
 nombreCompleto()
 
 info()
+
+*/
+
+class Persona {
+constructor(nombre, apellido, anioNacimiento) {
+this.nombre = nombre,
+this.apellido = apellido,
+this.anioNacimiento = anioNacimiento
+}
+
+calcularEdad() {
+const actualYear = new Date().getFullYear()
+return actualYear - this.anioNacimiento
+}
+
+nombreCompleto() {
+return `${this.nombre} ${this.apellido}`
+}
+
+info() {
+return `
+Nombre completo: ${this.nombreCompleto()}
+Edad: ${this.calcularEdad()}
+
+`
+}
+}
+
+const persona1 = new Persona("Francisco", "Carrasco", 1989)
+console.log(persona1.info())
